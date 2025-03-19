@@ -13,7 +13,7 @@ $sql = "INSERT INTO usuario (email, senha) VALUES ('$email', '$senha')";
 $resultado = mysqli_query($con, $sql);
 
 
-if ($row = mysqli_fetch_assoc($resultado)) {
+/*if ($row = mysqli_fetch_assoc($resultado)) {
     // Verifica a senha usando password_verify
     if (password_verify($senha, $row['senha'])) {
         $_SESSION['usuario'] = $email;
@@ -23,6 +23,6 @@ if ($row = mysqli_fetch_assoc($resultado)) {
     }
 } else {
     header("Location: index.html?msg=" . urlencode("Usuário não encontrado!"));
-}
+}*/
 
 mysqli_close($con);
