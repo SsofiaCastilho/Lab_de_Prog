@@ -26,3 +26,20 @@ button {
   color: red;
   text-align: center;
 }
+
+.mensagem {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.sucesso {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.erro {
+  background-color: #f8d7da;
+  color: #721c24;
+}
