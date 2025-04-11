@@ -17,3 +17,6 @@ if (!mysqli_fetch_assoc($result)) {
     exit();
 }
 ?>
+
+
+//Esse código é usado para proteger páginas que só podem ser acessadas por usuários autenticados. Ele é incluído no início de arquivos protegidos, como home.php, para garantir que apenas usuários com um token válido possam acessar essas páginas.

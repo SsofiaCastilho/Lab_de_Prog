@@ -6,3 +6,4 @@ if (!$con) {
 }
 ?>
 
+<!-- faz a conexão com o banco de dados e é chamada em verificar_bd.php, validar_token.php e processar_cadastro.php -->
