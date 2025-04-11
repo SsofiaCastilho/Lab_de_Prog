@@ -22,7 +22,7 @@ if ($row = mysqli_fetch_assoc($resultado)) {
         $token = bin2hex(random_bytes(32));
 
         // Salvar o token no banco de dados
-        $updateTokenSql = "UPDATE usuario SET token = ? WHERE email = ?";
+        $updateTokenSql = "UPDATE usuario SET token = $token WHERE email = $email";
         $updateStmt = mysqli_prepare($con, $updateTokenSql);
         mysqli_stmt_bind_param($updateStmt, "ss", $token, $email);
         mysqli_stmt_execute($updateStmt);
