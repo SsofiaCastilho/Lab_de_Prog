@@ -2,12 +2,18 @@
 session_start();
 require 'conexao_bd.php';
 
-$email = $_SESSION['usuario'];
-$token = $_SESSION['token'];
-
-if (!verificarToken($con, $email, $token)) {
-    header("Location: login.php?msg=" . urlencode("Sessão inválida! Faça login novamente."));
+if (!isset($_SESSION['token'])) {
+    header("Location: login.php?msg=" . urlencode("Você precisa estar logado."));
     exit();
 }
 
-//adicionar restrições aqui, quando for solicitado pelo professor
+$token = $_SESSION['token'];
+$sql = "SELECT * FROM usuario WHERE token = '$token'";
+$result = mysqli_query($con, $sql);
+
+if (!mysqli_fetch_assoc($result)) {
+    session_destroy();
+    header("Location: login.php?msg=" . urlencode("Sessão inválida. Faça login novamente."));
+    exit();
+}
+?>
