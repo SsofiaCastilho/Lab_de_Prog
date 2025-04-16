@@ -18,7 +18,7 @@
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" required>
 
-        <a href="login.php">Já tem conta? Faça login</a>
+        <a href="login.php" class="link-login">Já tem conta? Faça login</a>
         <button type="submit">Cadastrar</button>
     </form>
 </body>

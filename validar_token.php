@@ -1,5 +1,8 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 require 'conexao_bd.php';
 
 if (!isset($_SESSION['token'])) {
@@ -18,5 +21,4 @@ if (!mysqli_fetch_assoc($result)) {
 }
 ?>
 
-
-//Esse código é usado para proteger páginas que só podem ser acessadas por usuários autenticados. Ele é incluído no início de arquivos protegidos, como home.php, para garantir que apenas usuários com um token válido possam acessar essas páginas.
+<!--Esse código é usado para proteger páginas que só podem ser acessadas por usuários autenticados. Ele é incluído no início de arquivos protegidos, como home.php, para garantir que apenas usuários com um token válido possam acessar essas páginas.

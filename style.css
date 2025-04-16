@@ -44,13 +44,9 @@ button {
   color: #721c24;
 }
 
-.link-cadastro {
-  display: block;
-  margin-top: 10px;
-  text-align: center;
-  color: blue;
-  text-decoration: none;
-  font-weight: bold;
+.link-login:hover {
+  color: darkblue;
+  text-decoration: underline;
 }
 
 .link-cadastro:hover {
