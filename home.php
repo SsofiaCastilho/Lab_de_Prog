@@ -18,7 +18,7 @@ $result = mysqli_query($con, $sql);
 
 <head>
     <meta charset="UTF-8">
-    <title>Área Logada</title>
+    <title>Organiza-me</title>
 </head>
 
 <body>
