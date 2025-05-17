@@ -1,0 +1,14 @@
+{
+  "name": "sistema-cadastro",
+  "version": "1.0.0",
+  "description": "Sistema de cadastro e conexão automatizado",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "node-fetch": "^2.6.1"
+  }
+}
