@@ -1,5 +1,10 @@
 <?php
-$con = mysqli_connect("localhost", "root", "", "login");
+$servidor = getenv('DB_HOST') ?: 'localhost';
+$usuario = getenv('DB_USER') ?: 'root';
+$senha = getenv('DB_PASSWORD') ?: '';
+$dbname = getenv('DB_NAME') ?: 'login';
+
+$con = mysqli_connect($servidor, $usuario, $senha, $dbname);
 
 if (!$con) {
     die("Erro na conexão: " . mysqli_connect_error());

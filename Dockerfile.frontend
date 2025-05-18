@@ -1,0 +1,16 @@
+FROM php:8.0-apache
+
+# Instalar extensões PHP necessárias
+RUN docker-php-ext-install pdo pdo_mysql mysqli
+
+# Habilitar mod_rewrite para URLs amigáveis
+RUN a2enmod rewrite
+
+# Copiar arquivos da aplicação
+COPY . /var/www/html/
+
+# Configurar permissões
+RUN chown -R www-data:www-data /var/www/html
+
+# Expor porta 80
+EXPOSE 80
